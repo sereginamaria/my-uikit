@@ -16,7 +16,7 @@ const toggleMenu = () => {
       &#5125;
     </div>
     <Header/>
-    <Sidebar :openSideBar="isOpenMenu" />
+    <Sidebar :openSideBar="isOpenMenu" @toggle-sidebar="toggleMenu" />
     <div :class="['content', {content_full: !isOpenMenu}]">
       <router-view/>
     </div>

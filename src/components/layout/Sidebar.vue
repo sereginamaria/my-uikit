@@ -1,12 +1,14 @@
 <script setup>
 import {ref} from "vue";
 
-const props = defineProps({
+defineProps({
   openSideBar: {
     type: Boolean,
     required: true,
   }
 })
+
+const emit = defineEmits(["toggle-sidebar"]);
 
 const links = ref([
     {name: "Typography", href: '/typography'},
@@ -19,10 +21,16 @@ const links = ref([
     {name: "Table", href: '/table'},
     {name: "Accordion", href: '/accordion'},
 ])
+
+const toggleSidebar = () => {
+  if (document.documentElement.clientWidth < 1023) {
+    emit("toggle-sidebar");
+  }
+}
 </script>
 
 <template>
-<div :class="['sidebar', {'sidebar__is-open': openSideBar}]">
+<div :class="['sidebar', {'sidebar__is-open': openSideBar}]" @click="toggleSidebar">
   <router-link
       class="sidebar__link"
       v-for="link in links"
