@@ -50,12 +50,12 @@ const toggleSidebar = () => {
   position: fixed;
   width: 250px;
   padding: 20px;
+  z-index: 9;
   transition: 0.2s;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
   transform: translateX(-250px);
   &__is-open {
     transform: translateX(0px);
-    z-index: 9;
   }
   &__link {
     display: block;
