@@ -55,6 +55,7 @@ const toggleSidebar = () => {
   transform: translateX(-250px);
   &__is-open {
     transform: translateX(0px);
+    z-index: 9;
   }
   &__link {
     display: block;

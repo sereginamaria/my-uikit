@@ -11,7 +11,7 @@ import TableView from "@/views/TableView.vue";
 import AccordionView from "@/views/AccordionView.vue";
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
+    history: createWebHistory(),
     routes: [
         {
             path: "/",
