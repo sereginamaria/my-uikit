@@ -20,6 +20,7 @@ export default defineConfig({
             },
         }
     },
+    base: "https://sereginamaria.github.io/my-uikit/",
     plugins: [vue()],
     resolve: {
         alias: {
